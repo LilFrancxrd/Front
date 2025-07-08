@@ -5,13 +5,13 @@ import axiosClient from "../api/axiosClient";
 export default function Vehiculos(){
 
     const [patente, setPatente]= useState('');
-    const [tipoVehiculo, setTipoVehiculo]= useState('');
     const [rutCliente, setRutCliente]= useState('');
+    const [tipoVehiculo, setTipoVehiculo]= useState('');
     const [nomCliente, setNomCliente]= useState('');
 
     const [patenteError, setPatenteError] = useState('');
-    const [tipoVehiculoError, setTipoVehiculoError] = useState('');
     const [rutClienteError, setRutClienteError] = useState('');
+    const [tipoVehiculoError, setTipoVehiculoError] = useState('');
     const [nomClienteError, setNomClienteError] = useState('');
 
     const [generalError, setGeneralError] = useState(''); //Errores api
@@ -27,8 +27,8 @@ export default function Vehiculos(){
 
         e.preventDefault()
         setPatenteError('');
-        setTipoVehiculoError('');
         setRutClienteError('');
+        setTipoVehiculoError('');
         setNomClienteError('');
         setGeneralError('');
         setSuccessMessage('');
@@ -51,6 +51,10 @@ export default function Vehiculos(){
         if(!nomCliente.trim()){
             setNomClienteError("El nombre no puede estar en blanco")
         }
+        if(!valido){
+            setIsLoading(false);
+            return
+        }
 
         setIsLoading(true);
 
@@ -58,13 +62,18 @@ export default function Vehiculos(){
             
             const response = await axiosClient.post('/arriendo/crear',{
                 patente,
-                tipoVehiculo,
                 rutCliente,
+                tipoVehiculo,
                 nomCliente
             })
 
             setSuccessMessage('Arriendo ingresado correctamente')
             console.log('Arriendo creado:',response.data)
+
+            setPatente('')
+            setRutCliente('')
+            setTipoVehiculo('')
+            setNomCliente('')
 
             navigate('/arriendos')
         } catch (error) {
@@ -240,12 +249,13 @@ export default function Vehiculos(){
                                                     value={tipoVehiculo}
                                                     onChange={(e) => setTipoVehiculo(e.target.value)}
                                                     disabled={isLoading}
+                                                    required
                                                 >
                                                     <option value="placeholder-value" disabled hidden>Selecciona un tipo</option>
                                                     <option value="automovil">Automóvil</option>
                                                     <option value="camioneta">Camioneta</option>
-                                                    <option value="motocicleta">Motocicleta</option>
-                                                    <option value="furgoneta">Furgoneta</option>
+                                                    <option value="motocicleta">Suv</option>
+                                    
                                                 </select>
                                                 {tipoVehiculoError && <div className="invalid-feedback">{tipoVehiculoError}</div>}
                                             </div>

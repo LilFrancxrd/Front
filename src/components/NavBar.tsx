@@ -20,12 +20,14 @@ export default function NavBar(){
                             <NavLink to="/Vehiculos" className="nav-link">
                                 Vehiculos
                             </NavLink>
-                            {/* <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">SUV</a></li>
-                                <li><a className="dropdown-item" href="#">SEDAN </a></li>
-                                <li className="dropdown-divider"></li>
-                                <li><a className="dropdown-item" href="#">CAMIONETA  </a></li>
-                            </ul> */}
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to="/CrearUsuario" className="nav-link">
+                                Crear Usuario
+                            </NavLink>
+                        </li>
+                        <li>
+                            
                         </li>
 
                     </ul>

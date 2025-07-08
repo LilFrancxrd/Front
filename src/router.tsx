@@ -7,6 +7,7 @@ import Categorias, { loader as loaderCategorias } from './views/Categorias'
 import Layout from './layouts/Layout'
 import Login from './views/Login'
 import Vehiculos from './views/Vehiculos'
+import CrearUsuario from './views/CrearUsuario'
 
 export const router = createBrowserRouter([
 	{
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
 				element: <Vehiculos />,
 
 			},
+            {
+                path:'crearusuario',
+                element: <CrearUsuario/>
+            }
 
 		],
 	},
