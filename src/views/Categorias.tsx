@@ -1,24 +1,8 @@
-import { NavLink, useLoaderData } from "react-router-dom";
-import { getCategoriasConCantidadProductos } from "../services/CategoriaService";
-import {  type CategoriaConCantidadProductos } from "../types/categoria";
-
-
-
-
-export async function loader(){
-
-    try {
-        const categorias = await getCategoriasConCantidadProductos()
-        return categorias
-    } catch (error) {
-        
-    }
-}
+import { NavLink } from "react-router-dom";
 
 
 export default function DashBoard(){
-    const categorias = useLoaderData() as CategoriaConCantidadProductos[]
-    console.log(categorias)
+
     return(
 
         <>
@@ -27,7 +11,7 @@ export default function DashBoard(){
                     <div className="container-fluid">
                         <div className="row justify-content-md-center">
                         {/* <!-- ============================================================== -->
-                            SUV
+                            SEDAN
                         <!-- ============================================================== --> */}
                             <div className="col-lg-4 col-md-9 d-flex align-items-stretch">
                                 <div className="card p-2 me-1">
@@ -65,7 +49,7 @@ export default function DashBoard(){
                                 </div>
                             </div>
                             {/* <!-- ============================================================== -->
-                                                 SEDAN
+                                                 CAMIONETA
                             <!-- ============================================================== --> */}
                             <div className="col-lg-4 col-md-9 mt-0 mt-md-4 mt-lg-0 d-flex align-items-stretch">
                                 <div className="card pro-demo p-2 ms-1">
@@ -106,7 +90,7 @@ export default function DashBoard(){
                                     </div>
                                 </div>
                             </div>
-                            {/* //TERCERA CATEGORIA */}
+                            {/* //SUV */}
                             <div className="col-lg-4 col-md-9 mt-0 mt-md-4 mt-lg-0 d-flex ">
                                 <div className="card pro-demo p-2 ms-1">
                                     <div className="card-body p-4 bg-dark">

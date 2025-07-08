@@ -26,8 +26,15 @@ export default function NavBar(){
                                 Crear Usuario
                             </NavLink>
                         </li>
-                        <li>
-                            
+                        <li className="nav-item">
+                            <NavLink  to='/RegistrarDevolucion' className='nav-link'>
+                                Arriendos Activos
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/arriendos/terminados' className='nav-link'>
+                                Arriendos Terminados
+                            </NavLink>
                         </li>
 
                     </ul>

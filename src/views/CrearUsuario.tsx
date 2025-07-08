@@ -80,32 +80,32 @@ export default function CrearUsuario(){
         <>
             <div className="container mt-5">
             <div className="row justify-content-center">
-                <div className="col-md-6">
+                <div className="col-6">
                     <div className="card shadow-sm">
                         <div className="card-body p-4">
                             <h2 className="card-title text-center mb-4">Crear Nuevo Usuario</h2>
 
-                            {/* Mensajes generales (éxito o error de la API) */}
-                            {successMessage && <div className="alert alert-success" role="alert">{successMessage}</div>}
+                        
+                            {successMessage && <div className="alert alert-success" role="alert">{successMessage}</div>}      
                             
                             
                             <form onSubmit={enviarForm}>
-                                {/* Campo Email */}
+                                {/*Email */}
                                 <div className="mb-3">
                                     <label htmlFor="email" className="form-label">Email:</label>
                                     <input
-                                        type="email" // Importante para validación básica del navegador
+                                        type="email" 
                                         id="email"
                                         className={`form-control ${emailError ? 'is-invalid' : ''}`}
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        disabled={isLoading} // Deshabilita el input mientras se envía
-                                        required // Marca el campo como obligatorio
+                                        disabled={isLoading} 
+                    
                                     />
                                     {emailError && <div className="invalid-feedback">{emailError}</div>}
                                 </div>
 
-                                {/* Campo Contraseña */}
+                                {/* Contraseña */}
                                 <div className="mb-3">
                                     <label htmlFor="password" className="form-label">Contraseña:</label>
                                     <input
@@ -115,12 +115,12 @@ export default function CrearUsuario(){
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         disabled={isLoading}
-                                        required
+                                   
                                     />
                                     {passwordError && <div className="invalid-feedback">{passwordError}</div>}
                                 </div>
 
-                                {/* Campo Confirmar Contraseña */}
+                                {/*Confirmar Contraseña */}
                                 <div className="mb-3">
                                     <label htmlFor="passwordConfirmation" className="form-label">Confirmar Contraseña:</label>
                                     <input
@@ -130,12 +130,12 @@ export default function CrearUsuario(){
                                         value={passwordConfirmed}
                                         onChange={(e) => setPasswordConfirmed(e.target.value)}
                                         disabled={isLoading}
-                                        required
+                              
                                     />
                                     {passwordConfirmedError && <div className="invalid-feedback">{passwordConfirmedError}</div>}
                                 </div>
 
-                                {/* Botón de Enviar */}
+                       
                                 <button type="submit" className="btn btn-primary w-100" disabled={isLoading}>
                                     {isLoading ? 'Creando Usuario...' : 'Crear Usuario'}
                                 </button>

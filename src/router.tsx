@@ -1,13 +1,15 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import Home from './views/Home'
-import Categorias, { loader as loaderCategorias } from './views/Categorias'
+import Categorias from './views/Categorias'
 
 
 import Layout from './layouts/Layout'
 import Login from './views/Login'
 import Vehiculos from './views/Vehiculos'
 import CrearUsuario from './views/CrearUsuario'
+import ArriendosActivos from './views/ArriendosActivos'
+import ArriendosTerminados from './views/ArriendosTerminados'
 
 export const router = createBrowserRouter([
 	{
@@ -26,7 +28,7 @@ export const router = createBrowserRouter([
 			{
 				path: 'categorias',
 				element: <Categorias />,
-				loader: loaderCategorias,
+
 			},
 			{
 				path: 'vehiculos',
@@ -36,7 +38,15 @@ export const router = createBrowserRouter([
             {
                 path:'crearusuario',
                 element: <CrearUsuario/>
-            }
+            },
+			{
+				path:'registrardevolucion',
+				element: <ArriendosActivos/>
+			},
+			{
+				path:'arriendos/terminados',
+				element: <ArriendosTerminados/>
+			}
 
 		],
 	},

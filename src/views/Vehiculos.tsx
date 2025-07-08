@@ -14,7 +14,7 @@ export default function Vehiculos(){
     const [tipoVehiculoError, setTipoVehiculoError] = useState('');
     const [nomClienteError, setNomClienteError] = useState('');
 
-    const [generalError, setGeneralError] = useState(''); //Errores api
+    const [generalError, setGeneralError] = useState(''); 
     const [successMessage, setSuccessMessage] = useState('');
 
 
@@ -33,12 +33,11 @@ export default function Vehiculos(){
         setGeneralError('');
         setSuccessMessage('');
 
+
+
         let valido = true;
 
-        // if(patente.trim()){
-        //     setPatenteError('No puede estar en blanco')
-        //     valido = false
-        // }
+
 
         if (!tipoVehiculo || tipoVehiculo === 'placeholder-value') { 
             setTipoVehiculoError('Debes seleccionar un vehiculo');
@@ -75,10 +74,10 @@ export default function Vehiculos(){
             setTipoVehiculo('')
             setNomCliente('')
 
-            navigate('/arriendos')
+            navigate('/Home')
         } catch (error) {
             
-        }
+        } 
 
     }
 
@@ -96,7 +95,10 @@ export default function Vehiculos(){
                                     <div className="card-body d-flex flex-column align-items-center d-flex flex-column align-items-center">
                                         <img src="public\img\Toyota Yaris.jpg" alt="" style={{height:'200px'}} />
                                         <h4>Toyota Yaris</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
+                                        <p>
+                                            PATENTE: SEDN01
+                                        </p>
+                                
                                     </div>
                                 </div>
                             </div>
@@ -105,7 +107,9 @@ export default function Vehiculos(){
                                     <div className="card-body d-flex flex-column align-items-center">
                                         <img src="public\img\Ford Fusion 2020 azul.jpg" alt="" style={{height:'200px'}} />
                                         <h4>Ford Fusiomo 2020</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
+                                        <p>
+                                            PATENTE: SEDN02
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -114,16 +118,10 @@ export default function Vehiculos(){
                                     <div className="card-body d-flex flex-column align-items-center">
                                         <img src="public\img\Ford Fusion 2018.jpg" alt="" style={{height:'200px'}} />
                                         <h4>Ford Fusion 2018</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div className="card-tittle">
-                                    <div className="card-body d-flex flex-column align-items-center">
-                                        <img src="public\img\Honda Civic 2.webp" alt="" style={{height:'200px'}} />
-                                        <h4>Honda Civic 2020</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
+                                        <p>
+                                            PATENTE: SEDN03
+                                        </p>
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -136,36 +134,31 @@ export default function Vehiculos(){
                             <div className="card">
                                 <div className="card-tittle">
                                     <div className="card-body d-flex flex-column align-items-center">
-                                        <img src="public\img\Hyundai Elantra 2015.png" alt="" style={{height:'200px'}} />
-                                        <h4>Hyunday Elantra 2015</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
+                                        <img src="public\img\RAM1500.webp" alt="" style={{height:'200px'}} />
+                                        <h4>Ford RAM 1500</h4>
+                                        <p>
+                                            PATENTE: CAMN01
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="card">
                                 <div className="card-tittle">
                                     <div className="card-body d-flex flex-column align-items-center">
-                                        <img src="public\img\Hyundai Elantra2025.jpeg" alt="" style={{height:'200px'}} />
-                                        <h4>Hyundai Elantra 2025</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
+                                        <img src="public\img\L200.webp" alt="" style={{height:'200px'}} />
+                                        <h4>Mitsubishi L200</h4>
+                                        <p>PATENTE: CAMN02</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="card">
                                 <div className="card-tittle">
                                     <div className="card-body d-flex flex-column align-items-center">
-                                        <img src="public\img\Kia Optima 2020.png" alt="" style={{height:'200px'}} />
-                                        <h4>Kia Optima</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div className="card-tittle">
-                                    <div className="card-body d-flex flex-column align-items-center">
-                                        <img src="public\img\Mazda 3 gris 2.png" alt="" style={{height:'200px'}} />
-                                        <h4>Mazda 3</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
+                                        <img src="public\img\NP300.webp" alt="" style={{height:'200px'}} />
+                                        <h4>NISSAN NP300</h4>
+                                        <p>
+                                            PATENTE: CAMN03
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -178,36 +171,33 @@ export default function Vehiculos(){
                             <div className="card">
                                 <div className="card-tittle">
                                     <div className="card-body d-flex flex-column align-items-center">
-                                        <img src="public\img\Nissan Sentra 2.jpg" alt="" style={{height:'200px'}} />
-                                        <h4>Nissan Sentra</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
+                                        <img src="public\img\CRETA.png" alt="" style={{height:'200px'}} />
+                                        <h4>Hyundai Creta</h4>
+                                        <p>
+                                            PATENTE: SUVN01
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="card">
                                 <div className="card-tittle">
                                     <div className="card-body d-flex flex-column align-items-center">
-                                        <img src="public\img\Toyota Corolla.jpg" alt="" style={{height:'200px'}} />
-                                        <h4>Toyota Corolla</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
+                                        <img src="public\img\PALADISE.png" alt="" style={{height:'200px'}} />
+                                        <h4>Hyundai  Palisade</h4>
+                                        <p>
+                                            PATENTE: SUVN02
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="card">
                                 <div className="card-tittle">
                                     <div className="card-body d-flex flex-column align-items-center">
-                                        <img src="public\img\Audi a5 azul.png" alt="" style={{height:'200px'}} />
-                                        <h4>Auida A5</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div className="card-tittle">
-                                    <div className="card-body d-flex flex-column align-items-center">
-                                        <img src="public\img\Audi a5 azul.png" alt="" style={{height:'200px'}} />
-                                        <h4>Auida A5</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad nihil dignissimos doloremque inventore, deserunt eum labore consectetur corrupti sapiente aliquam nam? Dolores omnis quia sit maxime molestias veritatis? Temporibus.</p>
+                                        <img src="public\img\XTRAIL.png" alt="" style={{height:'200px'}} />
+                                        <h4>Nissan X-TRAIL</h4>
+                                        <p>
+                                            PATENTE: SUVN03
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -221,46 +211,49 @@ export default function Vehiculos(){
                                     <div className="card shadow-sm">
                                         <div className="card-body p-4">
                                             <h2 className="card-title text-center mb-4">Ingresar Nuevo Arriendo</h2>
-                                            {/* Mensajes de error y éxito generales */}
+                                    
                                             {generalError && <div className="alert alert-danger" role="alert">{generalError}</div>}
                                             {successMessage && <div className="alert alert-success" role="alert">{successMessage}</div>}
                                                 
                                             <form onSubmit={enviarForm}>
-                                            {/* Campo Patente */}
+
+                                            {/* PATENTE */}
                                             <div className="mb-3">
                                                 <label htmlFor="patente" className="form-label">Patente:</label>
                                                 <input
                                                     type="text"
                                                     id="patente"
-                                                    className={`form-control ${patenteError ? 'is-invalid' : ''}`} // Clase para feedback de error
+                                                    className={`form-control ${patenteError ? 'is-invalid' : ''}`} 
                                                     value={patente}
                                                     onChange={(e) => setPatente(e.target.value)}
                                                     disabled={isLoading}
                                                 />
-                                                {patenteError && <div className="invalid-feedback">{patenteError}</div>} {/* Mensaje de error Bootstrap */}
+                                                {patenteError && <div className="invalid-feedback">{patenteError}</div>} 
                                             </div>
 
-                                            {/* Campo Tipo Vehículo (Menú Desplegable) */}
+                                      
+                                            {/* SELECT */}
+
                                             <div className="mb-3">
                                                 <label htmlFor="tipoVehiculo" className="form-label">Tipo de Vehículo:</label>
                                                 <select
                                                     id="tipoVehiculo"
-                                                    className={`form-select ${tipoVehiculoError ? 'is-invalid' : ''}`} // Clase para feedback de error
+                                                    className={`form-select ${tipoVehiculoError ? 'is-invalid' : ''}`} 
                                                     value={tipoVehiculo}
                                                     onChange={(e) => setTipoVehiculo(e.target.value)}
                                                     disabled={isLoading}
                                                     required
                                                 >
                                                     <option value="placeholder-value" disabled hidden>Selecciona un tipo</option>
-                                                    <option value="automovil">Automóvil</option>
-                                                    <option value="camioneta">Camioneta</option>
-                                                    <option value="motocicleta">Suv</option>
+                                                    <option value="SED">Sedan</option>
+                                                    <option value="CAM">Camioneta</option>
+                                                    <option value="SUV">Suv</option>
                                     
                                                 </select>
                                                 {tipoVehiculoError && <div className="invalid-feedback">{tipoVehiculoError}</div>}
                                             </div>
 
-                                            {/* Campo RUT Cliente */}
+                                            {/*  RUT  */}
                                             <div className="mb-3">
                                                 <label htmlFor="rutCliente" className="form-label">RUT Cliente:</label>
                                                 <input
@@ -274,7 +267,7 @@ export default function Vehiculos(){
                                                 {rutClienteError && <div className="invalid-feedback">{rutClienteError}</div>}
                                             </div>
 
-                                            {/* Campo Nombre Cliente */}
+                                            {/*  NOMBRE  */}
                                             <div className="mb-4">
                                                 <label htmlFor="nombreCliente" className="form-label">Nombre Cliente:</label>
                                                 <input
@@ -288,10 +281,10 @@ export default function Vehiculos(){
                                                 {nomClienteError && <div className="invalid-feedback">{nomClienteError}</div>}
                                             </div>
 
-                                            {/* Botón de Enviar */}
+                                            
                                             <button 
                                                 type="submit" 
-                                                className="btn btn-success w-100" // w-100 para ancho completo, btn-success para color verde
+                                                className="btn btn-success w-100"
                                                 disabled={isLoading} 
                                             >
                                                 {isLoading ? 'Ingresando Arriendo...' : 'Ingresar Arriendo'}
